@@ -39,7 +39,7 @@ export  const Services = () => {
             <div className='skill-bx'>
               <h1>Our Services</h1>
               <p>
-                In Digital Surges we will dramatically grow your business offering these services: <br />
+                In AskMMeta we will dramatically grow your business offering these services: <br />
               </p>
               <Carousel
                 responsive={responsive}

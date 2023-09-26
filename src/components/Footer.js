@@ -14,7 +14,7 @@ function Footer() {
           <Col sm={4}>
             <img src={logo} alt='Logo' />
             <p>
-              Digital Surges was founded in 2022 by Chahine Elabed, a
+              AskMMeta was founded in 2022 by Chahine Elabed, a
               software engineer with a lot of ambitions whose goal is to help
               Realtors close more deals through so many different strategies
             </p>
@@ -32,7 +32,7 @@ function Footer() {
                 <img src={navIcon2} alt='' />
               </a>
             </div>
-            <p>CopyRight 2022. All rights reserved by Digital Surges</p>
+            <p>CopyRight 2022. All rights reserved by AskMMeta</p>
           </Col>
         </Row>
       </Container>

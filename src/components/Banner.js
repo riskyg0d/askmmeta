@@ -47,7 +47,7 @@ const [isOpen, setIsOpen]=useState(false)
         <Container>
           <Row className='align-items-center'>
             <Col xs={12} md={6} cl={7}>
-              <span className='tagline'>Welcome to Digital Surges </span>
+              <span className='tagline'>Welcome to AskMMeta </span>
               <h1>
                 <span className='wrap'>{text} </span> <br />
                 {` Services `}{" "}
