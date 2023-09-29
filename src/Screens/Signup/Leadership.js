@@ -1,34 +1,45 @@
 import React, { useState } from "react";
 import { Button, Col, Container, Row } from "react-bootstrap";
-import contactImg from "../../assets/img/ceo.png";
+import contactImg from "../../assets/img/logo.png";
 import { PopupModal } from "react-calendly";
 import MY_VIDEO from "../../assets/img/Who Are we_ .mp4";
 import meter1 from "../../assets/img/thumbnail1.png";
-import marketing from "../../assets/img/Marketing.jpg"
+import marketing from "../../assets/img/Marketing.jpg";
 export default function Leadership() {
- 
-    const [isOpen, setIsOpen] = useState(false);
- 
-  
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
-    <section className='contact ' id='connect'>
+    <section className="contact " id="connect">
       <Container>
-        <Row className='align-items-center'>
-          <Col md={4} className='signup'>
-            <img src={contactImg} alt='contact Us' /> <br />
-            <div className='bio'>
-              <p> CEO | Founder | entroprenuer</p> <br />
+        <Row className="align-items-center">
+          <Col md={4} className="signup">
+            <img src={contactImg} alt="contact Us" /> <br />
+            <div className="bio">
+              <p> Marketing Agency</p> <br />
             </div>
-            <div className='paragraph'>
+            <div className="paragraph">
               <p>
-                Allow me to introduce myself, I am Johnny Hatz, an aspiring entrepreneur with a burning desire to become an exceptional business owner. Over the years, I have accumulated a wealth of experience that has shaped my approach to the business world. My ultimate goal is to create ventures that bring substantial value to my customers, leaving a positive impact on their lives. Drawing from my strong business acumen and a keen sense of market trends, I aim to lead enterprises that not only achieve success but also prioritize authentic connections and top-notch products and services. I firmly believe that by providing exceptional value, I can build long-lasting relationships with my customers and make a meaningful difference in the market. With dedication and determination, I am committed to becoming a trailblazer in the business landscape, leaving behind a legacy that showcases my passion for entrepreneurship and the pursuit of excellence.{" "}
+                AskMMeta is a dynamic and creative marketing agency based in
+                Mumbai, India who specialises in crafting and executing
+                strategic plans to promote and elevate businesses and brands. In
+                the realm of modern business, a top-tier marketing agency is not
+                just an asset but a catalyst for unparalleled success. With a
+                relentless pursuit of ROI and an unwavering commitment to
+                staying at the forefront of algorithmic shifts, AskMMeta doesn't
+                just elevate your brand; it propels it into the digital and
+                traditional stratosphere, where business dreams become reality.
+                Join hands with us, and let's embark on a journey where your
+                business story is told vibrantly, where your overall visibility
+                soars, and where your dreams of business dominance become a
+                thrilling reality. Welcome to the future of AI based marketing;
+                welcome to AskMMeta.{" "}
               </p>
 
-              <Button className='vvd' onClick={() => setIsOpen(true)}>
+              <Button className="vvd" onClick={() => setIsOpen(true)}>
                 <span>Book a call</span>
               </Button>
               <PopupModal
-                url='https://calendly.com/digital_surges/30min'
+                url="https://calendly.com/digital_surges/30min"
                 onModalClose={() => setIsOpen(false)}
                 open={isOpen}
                 /*
@@ -40,9 +51,9 @@ export default function Leadership() {
             </div>
           </Col>
 
-          <Col md={8} sm={4} className=' process'>
+          <Col md={8} sm={4} className=" process">
             <div>
-              <img src={marketing} className='vidlead' />
+              <img src={marketing} className="vidlead" />
             </div>
           </Col>
         </Row>

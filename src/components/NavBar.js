@@ -1,17 +1,15 @@
 import { useState, useEffect } from "react";
 import { Navbar, Nav, Container } from "react-bootstrap";
-import logo from '../assets/img/logo.png';
+import logo from "../assets/img/logo.png";
 import navIcon1 from "../assets/img/nav-icon1.svg";
-import navIcon2 from '../assets/img/nav-icon2.png';
-import navIcon3 from '../assets/img/nav-icon33.svg';
+import navIcon2 from "../assets/img/nav-icon2.png";
+import navIcon3 from "../assets/img/nav-icon33.svg";
 import { PopupModal } from "react-calendly";
-
 
 import { Link } from "react-router-dom";
 
 export const NavBar = () => {
-
-  const [activeLink, setActiveLink] = useState('home');
+  const [activeLink, setActiveLink] = useState("home");
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -21,38 +19,38 @@ export const NavBar = () => {
       } else {
         setScrolled(false);
       }
-    }
+    };
 
     window.addEventListener("scroll", onScroll);
 
     return () => window.removeEventListener("scroll", onScroll);
-  }, [])
+  }, []);
 
   const onUpdateActiveLink = (value) => {
     setActiveLink(value);
-  }
+  };
 
   const [isOpen, setIsOpen] = useState(false);
 
-
   return (
-    <Navbar expand='sm' className={scrolled ? "scrolled" : ""}>
+    <Navbar expand="sm" className={scrolled ? "scrolled" : ""}>
       <Container>
         <Navbar.Brand>
-          <img src={logo} alt='Logo' className='logo' />
+          <img src={logo} alt="Logo" className="logo" />
         </Navbar.Brand>
-        <Navbar.Toggle aria-controls='basic-navbar-nav'>
-          <span className='navbar-toggler-icon'></span>
+        <Navbar.Toggle aria-controls="basic-navbar-nav">
+          <span className="navbar-toggler-icon"></span>
         </Navbar.Toggle>
-        <Navbar.Collapse id='basic-navbar-nav'>
-          <Nav className='ms-auto'>
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="ms-auto">
             {" "}
             <Nav.Link
               className={
                 activeLink === "home" ? "active navbar-link" : "navbar-link"
               }
-              onClick={() => onUpdateActiveLink("home")}>
-              <Link className='route' to='/'>
+              onClick={() => onUpdateActiveLink("home")}
+            >
+              <Link className="route" to="/">
                 Home
               </Link>
             </Nav.Link>{" "}
@@ -62,30 +60,31 @@ export const NavBar = () => {
                   ? "active navbar-link"
                   : "navbar-link"
               }
-              onClick={() => onUpdateActiveLink("leadership")}>
-              <Link className='route' to='/leadership'>
-                Leadership
+              onClick={() => onUpdateActiveLink("leadership")}
+            >
+              <Link className="route" to="/leadership">
+                About Us
               </Link>
             </Nav.Link>
           </Nav>
-          <span className='navbar-text'>
-            <div className='social-icon'>
-              <a href='#skill'>
-                <img src={navIcon1} alt='' />
+          <span className="navbar-text">
+            <div className="social-icon">
+              <a href="#skill">
+                <img src={navIcon1} alt="" />
               </a>
-              <a href='#projects'>
-                <img src={navIcon3} alt='' />
+              <a href="#projects">
+                <img src={navIcon3} alt="" />
               </a>
-              <a href='#study'>
-                <img src={navIcon2} alt='' />
+              <a href="#study">
+                <img src={navIcon2} alt="" />
               </a>
             </div>
 
-            <button className='vvd' onClick={() => setIsOpen(true)}>
+            <button className="vvd" onClick={() => setIsOpen(true)}>
               <span>Book a call</span>
             </button>
             <PopupModal
-              url='https://calendly.com/digital_surges/30min'
+              url="https://calendly.com/digital_surges/30min"
               onModalClose={() => setIsOpen(false)}
               open={isOpen}
               /*
@@ -99,4 +98,4 @@ export const NavBar = () => {
       </Container>
     </Navbar>
   );
-}
+};

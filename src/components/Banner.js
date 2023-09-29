@@ -1,72 +1,74 @@
-import React, { useEffect, useState } from 'react'
-import { Button, Col, Container, Row } from 'react-bootstrap'
-import { ArrowRightCircle} from 'react-bootstrap-icons'
-import headerImg from '../assets/img/header-img.svg'
+import React, { useEffect, useState } from "react";
+import { Button, Col, Container, Row } from "react-bootstrap";
+import { ArrowRightCircle } from "react-bootstrap-icons";
+import headerImg from "../assets/img/header-img.svg";
 import { PopupModal } from "react-calendly";
-export const  Banner =() =>{
-    const [loopNum,setLoopNum] = useState(0);
-    const [isDeleting, setIsDeleting] = useState(false);
-    const toRotate = ["Unconventional", "Daring", "certified", "Unsurpassed"];
-    const [text,setText]= useState("polarizing");
-    const period = 2000;
-    const [delta,setDelta]= useState(300 - Math.random() * 100);
+export const Banner = () => {
+  const [loopNum, setLoopNum] = useState(0);
+  const [isDeleting, setIsDeleting] = useState(false);
+  const toRotate = ["Unconventional", "Daring", "certified", "Unsurpassed"];
+  const [text, setText] = useState("polarizing");
+  const period = 2000;
+  const [delta, setDelta] = useState(300 - Math.random() * 100);
 
-    useEffect(() =>{
-let ticker = setInterval(()=>{
-tick();
-},delta)
+  useEffect(() => {
+    let ticker = setInterval(() => {
+      tick();
+    }, delta);
 
-return ( ) => (clearInterval( ticker))
-    },[text])
+    return () => clearInterval(ticker);
+  }, [text]);
 
-const [isOpen, setIsOpen]=useState(false)
+  const [isOpen, setIsOpen] = useState(false);
 
-    const tick = () => {
-      let i = loopNum % toRotate.length;
-      let fullText = toRotate[i];
-      let updatedText = isDeleting ? fullText.substring(0, text.length - 1) : fullText.substring(0, text.length + 1);
+  const tick = () => {
+    let i = loopNum % toRotate.length;
+    let fullText = toRotate[i];
+    let updatedText = isDeleting
+      ? fullText.substring(0, text.length - 1)
+      : fullText.substring(0, text.length + 1);
 
-      setText(updatedText);
+    setText(updatedText);
 
-      if (isDeleting) {
-        setDelta(prevDelta => (prevDelta / 2));
-      }
+    if (isDeleting) {
+      setDelta((prevDelta) => prevDelta / 2);
+    }
 
-      if (!isDeleting && updatedText == fullText) {
-        setIsDeleting(true);
-        setDelta(period);
-      } else if (isDeleting && updatedText == "") {
-        setIsDeleting(false);
-        setLoopNum(loopNum + 1);
-        setDelta(500);
-      }
-    };
+    if (!isDeleting && updatedText == fullText) {
+      setIsDeleting(true);
+      setDelta(period);
+    } else if (isDeleting && updatedText == "") {
+      setIsDeleting(false);
+      setLoopNum(loopNum + 1);
+      setDelta(500);
+    }
+  };
   return (
     <div>
-      <section className='banner' id='home'>
+      <section className="banner" id="home">
         <Container>
-          <Row className='align-items-center'>
+          <Row className="align-items-center">
             <Col xs={12} md={6} cl={7}>
-              <span className='tagline'>Welcome to AskMMeta </span>
+              <span className="tagline">Welcome to AskMMeta </span>
               <h1>
-                <span className='wrap'>{text} </span> <br />
+                <span className="wrap">{text} </span> <br />
                 {` Services `}{" "}
               </h1>
-              <p className='animate__animated animate__bounceIn'>
-                We specialize in working with Real estate firms in order to
-                build a better, more sustainable marketing foundation. From
-                there on we build a firm pipeline that leads to client
-                aquisition. We do not specialize in running ads as our only
-                service, we consult and fix every inefficiency from website
-                flaws to design and copywrighting, as well as keeping up with
-                new trends and leveraging them.
+              <p className="animate__animated animate__bounceIn">
+                AskMMeta is a dynamic and creative marketing agency based in
+                Mumbai, India who specialises in crafting and executing
+                strategic plans to promote and elevate businesses and brands. In
+                the realm of modern business, a top-tier marketing agency is not
+                just an asset but a catalyst for unparalleled success. With a
+                relentless pursuit of ROI and an unwavering commitment to
+                staying at the forefront of algorithmic shifts.
               </p>
               <Button onClick={() => setIsOpen(true)}>
                 let's connect <ArrowRightCircle size={25} />
               </Button>
 
               <PopupModal
-                url='https://calendly.com/digital_surges/30min'
+                url="https://calendly.com/digital_surges/30min"
                 onModalClose={() => setIsOpen(false)}
                 open={isOpen}
                 /*
@@ -80,12 +82,13 @@ const [isOpen, setIsOpen]=useState(false)
               xs={12}
               md={6}
               cl={5}
-              className='animate__animated animate__zoomIn'>
-              <img src={headerImg} alt='header Image'></img>
+              className="animate__animated animate__zoomIn"
+            >
+              <img src={headerImg} alt="header Image"></img>
             </Col>
           </Row>
         </Container>
       </section>
     </div>
   );
-}
+};
