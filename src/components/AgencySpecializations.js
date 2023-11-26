@@ -33,9 +33,9 @@ export default function AgencySpecializations() {
       },
       {
         id: 2,
-        title: "TikTok ads",
+        title: "Instagram ads",
         description:
-          "We will run TikTok ads for you if we think this would benefit your business much more than Facebook ads",
+          "We will run Instagram ads for you if we think this would benefit your business much more than Facebook ads",
         imgUrl: Img2,
       },
       {
@@ -74,7 +74,7 @@ export default function AgencySpecializations() {
       const jobs3 = [
         {
           id: 1,
-          title: "facebook Management",
+          title: "Facebook Management",
           description:
             "We will assign a Facebook account manager throughout the whole month, to copywright and Design 1 Post per Day",
           imgUrl: manage1,
@@ -88,9 +88,9 @@ export default function AgencySpecializations() {
         },
         {
           id: 3,
-          title: "Tik Tok management",
+          title: "X(Twitter) management",
           description:
-            "We will assign a Tik Tok account manager throughout the whole month,to copywright and Design 1 Post per Day, Videos Included",
+            "We will assign a X(Twitter) account manager throughout the whole month,to copywright and Design 1 Post per Day, Videos Included",
           imgUrl: manage3,
         },
       ];

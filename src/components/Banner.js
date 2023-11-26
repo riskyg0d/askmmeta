@@ -53,13 +53,10 @@ const [isOpen, setIsOpen]=useState(false)
                 {` Services `}{" "}
               </h1>
               <p className='animate__animated animate__bounceIn'>
-                We specialize in working with Real estate firms in order to
-                build a better, more sustainable marketing foundation. From
-                there on we build a firm pipeline that leads to client
-                aquisition. We do not specialize in running ads as our only
-                service, we consult and fix every inefficiency from website
-                flaws to design and copywrighting, as well as keeping up with
-                new trends and leveraging them.
+              AskMMeta is a dynamic and creative marketing agency based in Mumbai, India who specialises in crafting and executing strategic plans to promote and elevate businesses and brands. 
+              In the realm of modern business, a top-tier marketing agency is not just an asset but a catalyst for unparalleled success.
+              With a relentless pursuit of ROI and an unwavering commitment to staying at the forefront of algorithmic shifts, AskMMeta doesn't just elevate your brand; it propels it into the digital and traditional stratosphere, where business dreams become reality.
+              Join hands with us, and let's embark on a journey where your business story is told vibrantly, where your overall visibility soars, and where your dreams of business dominance become a thrilling reality. Welcome to the future of AI based marketing; welcome to AskMMeta.
               </p>
               <Button onClick={() => setIsOpen(true)}>
                 let's connect <ArrowRightCircle size={25} />

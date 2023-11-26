@@ -59,7 +59,7 @@ export  const Services = () => {
 
                 <div className='item'>
                   <img src={meter4} alt='' />
-                  <h2> Copywriting </h2>
+                  <h2> Curating Social Media Marketing Strategies </h2>
                 </div>
                 <div className='item'>
                   <img src={meter5} alt='' />
