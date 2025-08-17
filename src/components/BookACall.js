@@ -3,11 +3,10 @@ import { Button, Col, Container, Row } from "react-bootstrap";
 import contactImg from "../assets/img/contact-img.svg";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import Client1 from "../assets/img/Client1.jpg";
-import Client3 from "../assets/img/Client3.jpg";
-import Client4 from "../assets/img/Client4.jpg";
-import Client2 from "../assets/img/Client2.png";
-import { PopupModal } from "react-calendly";
+import Client1 from "../assets/img/avnyk.png";
+import Client3 from "../assets/img/bcb.jpeg.jpg";
+import Client4 from "../assets/img/blanco.jpeg.jpg";
+import Client2 from "../assets/img/manyavar.png";
 
 
 export default function BookACall() {
@@ -38,7 +37,7 @@ const responsive = {
   return (
     <section className='contact' id='connect'>
       <div className='testi'>
-        <h1 className='ml-8 mb-6'>Are you still not sure?</h1>
+        <h1 className='ml-8 mb-6'>Are you still not sure ?</h1>
       </div>
       <Container>
         <Row className='align-items-center'>
@@ -60,12 +59,10 @@ const responsive = {
                     }}
                     alt='Client photo'
                   />
-                  <h5>Daniel Lopez| Realtor | expRealty</h5>
+                  <h5>Aveda x Nykaa Salons</h5>
                   <p>
-                    I was skepticle at first But Chahine reassured me. He was
-                    very professional, so organized and kept me updated every
-                    part of the way. the results were incredible, but you have
-                    to be patient. <br />
+                    
+Transform your salon experience through carefully crafted social media strategies and cutting-edge marketing approaches that have not only boosted our clientele but also elevated our salon to new levels of success. <br />
                     <div>
                       <svg
                         xmlns='http://www.w3.org/2000/svg'
@@ -126,11 +123,9 @@ const responsive = {
                     }}
                     alt='Client photo'
                   />
-                  <h5>Jason Kauffman | Exp-realty</h5>
+                  <h5>Bombay Cocktail Bar | Andheri</h5>
                   <p>
-                    "Even before starting to work together, the value they
-                    offered me was so much better than people I used to pay
-                    monthly <br />
+                    "Transform your business with expertly curated social media strategies and marketing initiatives that have significantly enhanced our sales and propelled us to new heights." <br />
                     <div>
                       <svg
                         xmlns='http://www.w3.org/2000/svg'
@@ -191,11 +186,10 @@ const responsive = {
                     }}
                     alt='Client photo'
                   />
-                  <h5>Brandon mendes| Realtor| KW </h5>
+                  <h5>Manyavar </h5>
                   <p>
-                    Shaheen is a great communicator and they were constantly
-                    directing us towards making changes which we were hesitant
-                    at first but turned out to be so much more effective. <br />
+                    
+Revitalize your ethnic clothing brand with meticulously crafted social media strategies and marketing initiatives that have proven to significantly boost sales and propel our brand to new heights. <br />
                     <div>
                       <svg
                         xmlns='http://www.w3.org/2000/svg'
@@ -256,10 +250,9 @@ const responsive = {
                     }}
                     alt='Client photo'
                   />
-                  <h5>Lauren Peterson| Realtor| europe</h5>
+                  <h5>Blanco | Bandra</h5>
                   <p>
-                    I recommend working with them so much, I stopped wasting my
-                    money on ads with no particular strategy. <br />
+                  Elevate your café experience with thoughtfully curated social media strategies and innovative marketing approaches that have not only enhanced our sales but also taken our café to new heights. <br />
                     <div>
                       <svg
                         xmlns='http://www.w3.org/2000/svg'
@@ -311,19 +304,9 @@ const responsive = {
                 </div>
               </Carousel>
               <br />
-              <Button className='vvd' onClick={() => setIsOpen(true)}>
+              <Button className='vvd'>
                 <span>Book a call</span>
               </Button>
-              <PopupModal
-                url='https://calendly.com/digital-surges/30min'
-                onModalClose={() => setIsOpen(false)}
-                open={isOpen}
-                /*
-                 * react-calendly uses React's Portal feature (https://reactjs.org/docs/portals.html) to render the popup modal. As a result, you'll need to
-                 * specify the rootElement property to ensure that the modal is inserted into the correct domNode.
-                 */
-                rootElement={document.getElementById("root")}
-              />
             </div>
           </Col>
         </Row>

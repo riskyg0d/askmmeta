@@ -26,23 +26,23 @@ export default function AgencySpecializations() {
     const jobs = [
       {
         id: 1,
-        title: "Facebook ads",
+        title: "Meta Ads campaign",
         description:
-          "Our team of Facebook Ads experts will take care of optimizing your ads and bringing you Leads",
+          "Our team of Meta Ads experts will take care of optimizing your ads and bringing you Leads on Meta platforms such as Facebook and Instagram",
         imgUrl: Img1,
       },
       {
         id: 2,
-        title: "Instagram ads",
+        title: "Influencer Marketing and Management ",
         description:
-          "We will run Instagram ads for you if we think this would benefit your business much more than Facebook ads",
+          "We will incorporate suitable Influencers for your brand to improve awareness, enable global reach and improve customer engagement",
         imgUrl: Img2,
       },
       {
         id: 3,
-        title: "Google ads",
+        title: "Brand Collabaration",
         description:
-          "We will run Google Ad words for you if we think this would skyrocket your business much more and we'll optimize the buget and choose smart ways to get you closer to your goals",
+          "Elevate your business to new heights with our strategic partnership, where we optimize budgets, employ smart advertising strategies, and collaborate for cross-branding, joint marketing campaigns, influencer collabs, and festive pop-ups, maximizing your reach and impact.",
         imgUrl: Img3,
       },
     ];
@@ -74,23 +74,23 @@ export default function AgencySpecializations() {
       const jobs3 = [
         {
           id: 1,
-          title: "Facebook Management",
+          title: "Content Optimisation",
           description:
-            "We will assign a Facebook account manager throughout the whole month, to copywright and Design 1 Post per Day",
+            "Experience seamless content optimization across various platforms with our dedicated account manager, crafting daily copyright and design posts tailored to enhance your online presence throughout the month.",
           imgUrl: manage1,
         },
         {
           id: 2,
-          title: "Instagram management",
+          title: "Photo and Video Creation",
           description:
-            "We will assign an Instagram account manager throughout the whole month, to copywright and Design 1 Post per Day",
+            "Capture the essence of your brand with our dedicated photography and videography team, ensuring a month-long stream of professionally crafted visuals tailored for content optimization across various platforms.",
           imgUrl: manage2,
         },
         {
           id: 3,
-          title: "X(Twitter) management",
+          title: "Community Engagement",
           description:
-            "We will assign a X(Twitter) account manager throughout the whole month,to copywright and Design 1 Post per Day, Videos Included",
+            "Foster meaningful connections and enhance your online community with our dedicated team, orchestrating engaging interactions and valuable content across various platforms throughout the month, creating a vibrant digital space for your brand.",
           imgUrl: manage3,
         },
       ];
@@ -108,22 +108,22 @@ export default function AgencySpecializations() {
               onSelect={(k) => setKey(k)}
               className='nav-pills mb-5 jusify-content-center align-items-center'>
               <Tab eventKey='1' title='Social Media Marketing'>
-                <Row className='animate__animated animate__pulse'>
+                <Row className='animate_animated animate_pulse'>
                   {jobs.map((item, index) => {
                     return <JobCard key={item.id} {...item} />;
                   })}
                 </Row>
               </Tab>
 
-              <Tab eventKey='3' title='Social Media Management'>
-                <Row className='animate__animated animate__pulse'>
+              <Tab eventKey='3' title='Content Creation'>
+                <Row className='animate_animated animate_pulse'>
                   {jobs3.map((item, index) => {
                     return <JobCard key={item.id} {...item} />;
                   })}
                 </Row>
               </Tab>
-              <Tab eventKey='2' title='Web development'>
-                <Row className='animate__animated animate__pulse'>
+              <Tab eventKey='2' title='Web Development'>
+                <Row className='animate_animated animate_pulse'>
                   {jobs2.map((item, index) => {
                     return <JobCard key={item.id} {...item} />;
                   })}
